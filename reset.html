@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajustes - TONSOR BARBER</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Estadisticas</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="ajustes-container">
+    <h2>⚙️ Ajustes</h2>
+    <p class="ajustes-desc">Aquí podrás reiniciar estadísticas <br> y limpiar registros o configurar opciones adicionales.</p>
+
+    <!-- Botón principal de reinicio -->
+    <div class="reiniciar-screen">
+      <button class="reiniciar-btn" id="resetBtn">🔄 Reiniciar estadísticas</button>
+    </div>
+  </main>
+
+  <!-- Footer opcional -->
+  <footer class="bottom-nav">
+    <button class="nav-btn ingreso" onclick="location.href='ingreso.html'">Ingreso</button>
+    <button class="nav-btn gasto" onclick="location.href='gasto.html'">Gasto</button>
+  </footer>
+
+  <script src="js/reset.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Ingreso</title>
+  <link rel="stylesheet" href="css/ingreso.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Estadisticas</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <main class="ingreso-container">
+    <!-- Tarjetas iniciales -->
+    <div class="cards" id="cardServicio">Servicio</div>
+    <div class="cards" id="cardEfectivo">Efectivo</div>
+
+    <!-- Formulario Servicio -->
+    <form id="formServicio" class="hidden">
+      <div class="form-group">
+        <label for="nombre">Nombre del cliente</label>
+        <input type="text" id="nombre" placeholder="Ejemplo: Juan Pérez">
+      </div>
+
+      <div class="form-group">
+        <label>Servicio prestado</label>
+        <div class="servicios">
+          <button type="button" class="servicio-btn corte" data-servicio="Corte">Corte</button>
+          <button type="button" class="servicio-btn barba" data-servicio="Barba">Barba</button>
+          <button type="button" class="servicio-btn tinte" data-servicio="Tinte">Tinte</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Edad</label>
+        <div class="edades">
+          <button type="button" class="edad-btn" data-edad="Niño">Niño</button>
+          <button type="button" class="edad-btn" data-edad="Adulto">Adulto</button>
+          <button type="button" class="edad-btn" data-edad="Mayor">Mayor</button>
+        </div>
+      </div>
+
+      <div class="form-group costo-group">
+        <label for="costo">Costo</label>
+        <div class="costo-wrapper">
+          <input type="number" id="costo" placeholder="Ejemplo: 10">
+          <select id="moneda">
+            <option value="Bs">Bs</option>
+            <option value="$">$</option>
+            <option value="COP">COP</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-guardar">Registrar</button>
+    </form>
+
+    <!-- Formulario Efectivo -->
+    <form id="formEfectivo" class="hidden">
+      <div class="form-group costo-group">
+        <label for="cantidad">Cantidad</label>
+        <div class="costo-wrapper">
+          <input type="number" id="cantidad" placeholder="Ejemplo: 100">
+          <select id="monedaEfectivo">
+            <option value="Bs">Bs</option>
+            <option value="$">$</option>
+            <option value="COP">COP</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <select id="tipo">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Transferencia">Transferencia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="concepto">Concepto</label>
+        <input type="text" id="concepto" maxlength="120" placeholder="Ejemplo: Pago de producto">
+      </div>
+
+      <button type="submit" class="btn-guardar">Registrar</button>
+    </form>
+  </main>
+
+  <script src="js/ingreso.js"></script>
+</body>
+</html>

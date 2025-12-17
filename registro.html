@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registros - TONSOR BARBER</title>
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Estadisticas</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="registro-container">
+    <h2>📑 Registros</h2>
+
+    <!-- Botones de filtro -->
+    <div class="filtros">
+      <button class="btn-filtro ingreso" id="btnIngresos">📈 Ingresos</button>
+      <button class="btn-filtro gasto" id="btnGastos">📉 Gastos</button>
+    </div>
+
+    <!-- Contenedor de tarjetas -->
+    <div id="registroList" class="registro-list">
+      <!-- Ejemplo de tarjeta minimizada -->
+      <!-- Estas se renderizan dinámicamente desde registro.js -->
+      <!--
+      <div class="registro-card ingreso">
+        <span class="icon">✂️</span>
+        <div class="info">
+          <p><strong>Corte:</strong> David</p>
+          <p><strong>Monto:</strong> 25000 Bs</p>
+        </div>
+        <div class="acciones">
+          <button class="btn-accion ojo">👁️</button>
+          <button class="btn-accion eliminar">❌</button>
+        </div>
+        <div class="detalle hidden">
+          <p>Edad: Adulto</p>
+          <p>Fecha: 17/12/2025</p>
+          <p>Moneda: Bs</p>
+        </div>
+      </div>
+      -->
+    </div>
+  </main>
+
+<!-- Botón reiniciar estadísticas centrado en pantalla -->
+<div class="reiniciar-screen">
+  <button class="reiniciar-btn" onclick="location.href='reset.html'">🔄 Reiniciar estadísticas</button>
+</div>
+
+
+
+  <!-- Nav inferior -->
+  <footer class="bottom-nav">
+    <button class="nav-btn ingreso" onclick="location.href='ingreso.html'">Ingreso</button>
+    <button class="nav-btn gasto" onclick="location.href='gasto.html'">Gasto</button>
+  </footer>
+
+  <script src="js/registro.js"></script>
+</body>
+</html>

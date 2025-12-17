@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Gasto - TONSOR BARBER</title>
+  <link rel="stylesheet" href="css/gasto.css">
+  <!-- Sugerencia: elimina dashboard.css para evitar heredar estilos no deseados -->
+  <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="ingreso.html">Ingresos</a></li>
+      <li><a href="gasto.html">Gastos</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="gasto-container">
+    <h2>📉 Registrar Gasto</h2>
+
+    <form id="formGasto">
+      <!-- Descripción del gasto -->
+      <div class="form-group">
+        <label for="descripcion">Descripción del gasto</label>
+        <input type="text" id="descripcion" placeholder="Ejemplo: Compra de insumos">
+      </div>
+
+      <!-- Cantidad y moneda -->
+      <div class="form-group costo-group">
+        <label for="cantidadGasto">Cantidad</label>
+        <div class="costo-wrapper">
+          <input type="number" id="cantidadGasto" placeholder="Ejemplo: 50">
+          <select id="monedaGasto">
+            <option value="Bs">Bs</option>
+            <option value="USD">USD</option>
+            <option value="COP">COP</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Botón guardar -->
+      <button type="submit" class="btn-guardar">Registrar</button>
+    </form>
+  </main>
+
+  <!-- Footer navegación -->
+  <footer class="bottom-nav">
+    <button class="nav-btn ingreso" onclick="location.href='ingreso.html'">Ingreso</button>
+    <button class="nav-btn gasto" onclick="location.href='gasto.html'">Gasto</button>
+  </footer>
+
+  <script src="js/gasto.js"></script>
+</body>
+</html>

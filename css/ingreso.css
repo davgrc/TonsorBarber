@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.banner {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.ingreso-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cards {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 12px;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  grid-column: span 2;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+}
+
+.servicios, .edades {
+  display: flex;
+  gap: 10px;
+}
+
+.servicio-btn, .edad-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.servicio-btn.corte { background-color: #28a745; }
+.servicio-btn.barba { background-color: #007bff; }
+.servicio-btn.tinte { background-color: #dc3545; }
+
+.edad-btn {
+  background-color: #6c757d; /* gris neutro */
+  color: #fff;
+}
+
+.servicio-btn.active, .edad-btn.active {
+  outline: 3px solid #000;
+}
+
+.costo-group .costo-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.costo-wrapper input {
+  flex: 4; /* 80% */
+}
+
+.costo-wrapper select {
+  flex: 1; /* 20% */
+}
+
+.btn-guardar {
+  width: 100%;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-guardar:hover {
+  background-color: #333;
+}

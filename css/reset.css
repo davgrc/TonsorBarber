@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.ajustes-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.ajustes-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ajustes-desc {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Botón centrado en pantalla */
+.reiniciar-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.reiniciar-btn {
+  padding: 14px 24px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.reiniciar-btn:hover {
+  background-color: #b52a37;
+  transform: scale(1.05);
+}

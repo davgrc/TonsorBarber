@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TONSOR BARBER - Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Estadísticas</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="dashboard">
+    <!-- Tarjetas cuadradas -->
+    <div class="card" id="cardCorte" onclick="location.href='detalle.html?tipo=Corte'">
+      <span class="icon">✂️</span>
+      <h3 id="countCorte">0</h3>
+      <p>Cortes</p>
+    </div>
+
+    <div class="card" id="cardBarba" onclick="location.href='detalle.html?tipo=Barba'">
+      <span class="icon">🧔</span>
+      <h3 id="countBarba">0</h3>
+      <p>Barbas</p>
+    </div>
+
+    <div class="card" id="cardTinte" onclick="location.href='detalle.html?tipo=Tinte'">
+      <span class="icon">🎨</span>
+      <h3 id="countTinte">0</h3>
+      <p>Tintes</p>
+    </div>
+
+    <div class="card" id="cardIngresos" onclick="location.href='stats.html?tipo=ingresos'">
+      <span class="icon">💵</span>
+      <h3 id="totalIngresos">—</h3>
+      <p>Ingresos</p>
+    </div>
+
+    <div class="card" id="cardGastos" onclick="location.href='stats.html?tipo=gastos'">
+      <span class="icon">📉</span>
+      <h3 id="totalGastos">—</h3>
+      <p>Gastos</p>
+    </div>
+
+    <div class="card" id="cardGanancias" onclick="location.href='stats.html?tipo=ganancias'">
+      <span class="icon">📈</span>
+      <h3 id="totalGanancias">—</h3>
+      <p>Ganancias</p>
+    </div>
+  </main>
+
+  <!-- Botón para mostrar/ocultar panel de tasas -->
+  <section class="cambio-toggle">
+    <button id="toggleTasas" class="toggle-btn">💱 Control de tasas</button>
+  </section>
+
+  <!-- Panel de configuración de tasas (minimizable) -->
+  <section class="cambio-section hidden" id="cambioSection">
+    <h2>💱 Configuración de tasas</h2>
+    <form id="formTasas">
+      <div class="form-group">
+        <label for="copUsd">COP → $</label>
+        <input type="number" id="copUsd" placeholder="Ejemplo: 4000">
+      </div>
+
+      <div class="form-group">
+        <label for="bsUsd">Bs → $</label>
+        <input type="number" id="bsUsd" placeholder="Ejemplo: 277">
+      </div>
+
+      <div class="form-group">
+        <label for="destino">Moneda destino</label>
+        <select id="destino">
+          <option value="$">$</option>
+          <option value="Bs">Bs</option>
+          <option value="COP">COP</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-guardar">Guardar configuración</button>
+    </form>
+  </section>
+
+  <!-- Nav inferior -->
+  <footer class="bottom-nav">
+    <button class="nav-btn ingreso" id="btnIngreso">Ingreso</button>
+    <button class="nav-btn gasto" id="btnGasto">Gasto</button>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/dashboard.js"></script>
+  <script src="js/stats.js"></script>
+</body>
+</html>

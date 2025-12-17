@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle - TONSOR BARBER</title>
+  <link rel="stylesheet" href="css/detalle.css">
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Estadisticas</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="stats-container">
+    <h2 id="detalleTitulo">📊 Estadísticas</h2>
+
+    <!-- Bloque principal -->
+    <section class="stats-block">
+      <h3>Total realizados</h3>
+      <p><span id="totalRealizados">0</span></p>
+      <hr>
+
+      <h4>Edades</h4>
+      <ul>
+        <li>Niños: <span id="countNinos">0</span></li>
+        <li>Adultos: <span id="countAdultos">0</span></li>
+        <li>Mayores: <span id="countMayores">0</span></li>
+      </ul>
+      <hr>
+
+      <h4>Ingresos por moneda</h4>
+      <ul>
+        <li>Bs: <span id="ingresoBs">—</span></li>
+        <li>$: <span id="ingresoUsd">—</span></li>
+        <li>COP: <span id="ingresoCop">—</span></li>
+      </ul>
+    </section>
+
+    <!-- Botón para ver registros -->
+    <div class="registro-btn-container">
+      <button class="registro-btn" onclick="location.href='registro.html'">📑 Ver registros</button>
+    </div>
+  </main>
+
+  <!-- Nav inferior -->
+  <footer class="bottom-nav">
+    <button class="nav-btn ingreso" onclick="location.href='ingreso.html'">Ingreso</button>
+    <button class="nav-btn gasto" onclick="location.href='gasto.html'">Gasto</button>
+  </footer>
+
+  <script src="js/detalle.js"></script>
+</body>
+</html>

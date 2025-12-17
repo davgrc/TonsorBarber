@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TONSOR BARBER - Estadísticas</title>
+  <link rel="stylesheet" href="css/stats.css">
+  <link rel="stylesheet" href="css/detalle.css">
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Servicios</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="stats-container">
+    <h2 id="statsTitle"></h2>
+    <div id="statsList"></div>
+  </main>
+
+      <!-- Botón para ver registros -->
+    <div class="registro-btn-container">
+      <button class="registro-btn" onclick="location.href='registro.html'">📑 Ver registros</button>
+    </div>
+  </main>
+
+
+  <!-- Footer navegación -->
+  <footer class="bottom-nav">
+    <button class="nav-btn ingreso" onclick="location.href='ingreso.html'">Ingreso</button>
+    <button class="nav-btn gasto" onclick="location.href='gasto.html'">Gasto</button>
+    <button class="nav-btn registro" onclick="location.href='registro.html'">Registros</button>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/stats.js"></script>
+</body>
+</html>
