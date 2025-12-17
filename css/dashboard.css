@@ -102,7 +102,7 @@ body {
 /* Grid de tarjetas cuadradas */
 .dashboard {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* siempre 3 columnas */
   gap: 20px;
   padding: 20px;
 }
@@ -259,47 +259,47 @@ body {
   opacity: 0.85;
 }
 
-/*MEDIA QUERIS*/
 @media screen and (max-width: 480px) {
   .dashboard {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 12px;
-    padding: 12px;
+    grid-template-columns: repeat(3, 1fr); /* sigue siendo 3 columnas */
+    gap: 10px;
+    padding: 10px;
   }
 
   .card {
-    font-size: 14px;
-    padding: 14px;
+    font-size: 13px;
+    padding: 12px;
   }
 
   .card span.icon {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .card h3 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .card p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .toggle-btn,
   .btn-guardar {
-    font-size: 14px;
-    padding: 10px 16px;
+    font-size: 13px;
+    padding: 8px 14px;
   }
 
   .bottom-nav .nav-btn {
-    font-size: 14px;
-    padding: 12px;
+    font-size: 13px;
+    padding: 10px;
   }
 
   .banner-title {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .logout {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
+
