@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+  zoom: 1;
+}
+
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -251,4 +257,49 @@ body {
 
 .nav-btn:hover {
   opacity: 0.85;
+}
+
+/*MEDIA QUERIS*/
+@media screen and (max-width: 480px) {
+  .dashboard {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .card {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .card span.icon {
+    font-size: 24px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .toggle-btn,
+  .btn-guardar {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .bottom-nav .nav-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .banner-title {
+    font-size: 18px;
+  }
+
+  .logout {
+    font-size: 13px;
+  }
 }
