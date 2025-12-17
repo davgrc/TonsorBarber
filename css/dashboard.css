@@ -303,3 +303,29 @@ body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .cambio-section {
+    margin: 10px;
+    padding: 16px;
+  }
+
+  #formTasas {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .btn-guardar {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
