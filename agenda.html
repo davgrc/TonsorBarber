@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda de Clientes</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/agenda.css">
+</head>
+<body>
+<!-- Banner superior -->
+<header class="banner">
+  <button class="menu-btn" id="menuBtn">&#9776;</button>
+  <h1 class="banner-title">
+    <a href="dashboard.html" class="banner-link">TONSOR BARBER</a>
+  </h1>
+  <span class="logout" id="logoutBtn">Cerrar sesión</span>
+</header>
+
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Estadísticas</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="personal.html">Personal</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="agenda-container">
+    <h2>Agenda de Clientes</h2>
+
+    <!-- Formulario para agregar cliente -->
+    <form id="formAgenda">
+      <div class="form-group">
+        <label for="clienteNombre">Nombre</label>
+        <input type="text" id="clienteNombre" placeholder="Ejemplo: Juan Pérez" required>
+      </div>
+
+      <div class="form-group">
+        <label for="clienteTelefono">Teléfono</label>
+        <input type="text" id="clienteTelefono" placeholder="Ejemplo: 0414-1234567" required>
+      </div>
+
+      <button type="submit" class="btn-guardar">Agregar Cliente</button>
+    </form>
+
+    <!-- Lista de clientes -->
+    <section class="lista-clientes">
+      <h3>Clientes registrados</h3>
+      <ul id="clientesList">
+        <!-- Aquí se insertarán los clientes -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/agenda.js"></script>
+    <script src="js/menu.js"></script>
+  
+</body>
+</html>

@@ -41,7 +41,7 @@ body {
 }
 
 .logout {
-  font-size: 18px; /* icono más visible */
+  font-size: 18px;
   cursor: pointer;
 }
 
@@ -151,6 +151,13 @@ body {
   transform: translateY(-4px);
 }
 
+/* Tarjeta de Servicios ocupa las 3 columnas */
+.card.servicios {
+  grid-column: span 3;
+  aspect-ratio: auto; /* opcional: que no se fuerce cuadrado */
+  min-height: 150px;  /* altura mínima para que se vea robusta */
+}
+
 /* Botón toggle del panel de tasas */
 .cambio-toggle {
   text-align: center;
@@ -215,7 +222,7 @@ body {
 }
 
 .btn-guardar {
-  grid-column: 1; /* ocupa toda la columna en móviles */
+  grid-column: 1;
   padding: 12px;
   background-color: #000;
   color: #fff;
@@ -241,12 +248,12 @@ body {
   bottom: 0;
   width: 100%;
   display: flex;
-  height: 70px; /* altura fija */
+  height: 70px;
 }
 
 .nav-btn {
   flex: 1;
-  height: 100%; /* ocupa toda la altura del nav */
+  height: 100%;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -270,7 +277,7 @@ body {
 /* Responsive ajustes */
 @media screen and (max-width: 480px) {
   .dashboard {
-    grid-template-columns: repeat(3, 1fr); /* sigue siendo 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 10px;
   }
@@ -307,7 +314,7 @@ body {
   }
 
   .logout {
-    font-size: 16px; /* icono más pequeño en móviles */
+    font-size: 16px;
   }
 
   .cambio-section {
@@ -316,7 +323,7 @@ body {
   }
 
   #formTasas {
-    grid-template-columns: 1fr; /* una sola columna en móviles */
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
@@ -339,10 +346,19 @@ body {
 /* En pantallas grandes, dos columnas en el formulario */
 @media screen and (min-width: 768px) {
   #formTasas {
-    grid-template-columns: 1fr 1fr; /* dos columnas */
+    grid-template-columns: 1fr 1fr;
   }
 
   .btn-guardar {
-    grid-column: span 2; /* botón ocupa todo el ancho */
+    grid-column: span 2;
   }
+}
+
+
+/* MENU */
+
+.banner-title a {
+  color: inherit;       /* mantiene el color blanco del banner */
+  text-decoration: none; /* quita el subrayado */
+  cursor: pointer;       /* mano al pasar */
 }

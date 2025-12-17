@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Personal</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/personal.css">
+</head>
+<body>
+  <!-- Banner superior -->
+  <header class="banner">
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <h1 class="banner-title">TONSOR BARBER</h1>
+    <span class="logout" id="logoutBtn">Cerrar sesión</span>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <ul>
+      <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="detalle.html">Estadísticas</a></li>
+      <li><a href="registro.html">Registros</a></li>
+      <li><a href="personal.html">Personal</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="reset.html">Ajustes</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <main class="personal-container">
+    <h2>Gestión de Personal</h2>
+
+    <!-- Formulario para agregar personal -->
+    <form id="formPersonal">
+      <div class="form-group">
+        <label for="personalNombre">Nombre</label>
+        <input type="text" id="personalNombre" placeholder="Ejemplo: Carlos" required>
+      </div>
+
+      <div class="form-group">
+        <label for="personalCargo">Cargo</label>
+        <select id="personalCargo" required>
+          <option value="Barbero" selected>Barbero</option>
+          <!-- Aquí se insertarán más cargos dinámicamente -->
+        </select>
+      </div>
+
+      <button type="button" id="btnAgregarCargo" class="btn-secundario">Agregar Cargos</button>
+      <button type="submit" class="btn-guardar">Agregar Personal</button>
+    </form>
+
+    <!-- Lista de personal -->
+    <section class="lista-personal">
+      <h3>Personal registrado</h3>
+      <ul id="personalList">
+        <!-- Aquí se insertarán los miembros del personal -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/personal.js"></script>
+</body>
+</html>

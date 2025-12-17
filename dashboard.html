@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TONSOR BARBER - Dashboard</title>
+  <title>TONSOR BARBER</title>
   <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
@@ -11,7 +11,6 @@
   <header class="banner">
     <button class="menu-btn" id="menuBtn">&#9776;</button>
     <h1 class="banner-title" id="bannerTitle">TONSOR BARBER</h1>
-    <!-- Icono de salida en lugar de texto -->
     <span class="logout" id="logoutBtn">Cerrar sesión</span>
   </header>
 
@@ -20,6 +19,8 @@
     <button class="close-btn" id="closeBtn">✖</button>
     <ul>
       <li><a href="dashboard.html">Inicio</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="personal.html">Personal</a></li>
       <li><a href="detalle.html">Estadísticas</a></li>
       <li><a href="registro.html">Registros</a></li>
       <li><a href="reset.html">Ajustes</a></li>
@@ -31,25 +32,14 @@
 
   <!-- Contenido principal -->
   <main class="dashboard">
-    <!-- Tarjetas cuadradas -->
-    <div class="card" id="cardCorte" onclick="location.href='detalle.html?tipo=Corte'">
-      <span class="icon">✂️</span>
-      <h3 id="countCorte">0</h3>
-      <p>Cortes</p>
+    <!-- Tarjeta grande de Servicios -->
+    <div class="card servicios" id="cardServicios" onclick="location.href='detalle.html?tipo=Servicios'">
+      <span class="icon">💈</span>
+      <h3 id="countServicios">0</h3>
+      <p>Servicios</p>
     </div>
 
-    <div class="card" id="cardBarba" onclick="location.href='detalle.html?tipo=Barba'">
-      <span class="icon">🧔</span>
-      <h3 id="countBarba">0</h3>
-      <p>Barbas</p>
-    </div>
-
-    <div class="card" id="cardTinte" onclick="location.href='detalle.html?tipo=Tinte'">
-      <span class="icon">🎨</span>
-      <h3 id="countTinte">0</h3>
-      <p>Tintes</p>
-    </div>
-
+    <!-- Tarjetas de métricas -->
     <div class="card" id="cardIngresos" onclick="location.href='stats.html?tipo=ingresos'">
       <span class="icon">💵</span>
       <h3 id="totalIngresos">—</h3>
@@ -69,12 +59,12 @@
     </div>
   </main>
 
-  <!-- Botón para mostrar/ocultar panel de tasas -->
+  <!-- Botón toggle panel de tasas -->
   <section class="cambio-toggle">
     <button id="toggleTasas" class="toggle-btn">💱 Control de tasas</button>
   </section>
 
-  <!-- Panel de configuración de tasas (minimizable) -->
+  <!-- Panel de configuración de tasas -->
   <section class="cambio-section hidden" id="cambioSection">
     <h2>💱 Configuración de tasas</h2>
     <form id="formTasas">

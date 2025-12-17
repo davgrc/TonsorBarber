@@ -46,25 +46,18 @@ if (formTasas) {
 // ======================================================
 // Elementos de tarjetas
 // ======================================================
-const countCorte = document.getElementById('countCorte');
-const countBarba = document.getElementById('countBarba');
-const countTinte = document.getElementById('countTinte');
+const countServicios = document.getElementById('countServicios');
 const totalIngresos = document.getElementById('totalIngresos');
 const totalGastos = document.getElementById('totalGastos');
 const totalGanancias = document.getElementById('totalGanancias');
 
 // ======================================================
-// Actualizar servicios (Corte, Barba, Tinte)
+// Actualizar servicios (unificados en "Servicios")
 // ======================================================
 function actualizarServicios() {
   const counts = getLS('serviciosCount'); // [{tipo, total}]
-  const map = counts.reduce((acc, cur) => {
-    acc[cur.tipo] = cur.total;
-    return acc;
-  }, {});
-  countCorte.textContent = map['Corte'] || 0;
-  countBarba.textContent = map['Barba'] || 0;
-  countTinte.textContent = map['Tinte'] || 0;
+  const total = counts.reduce((acc, cur) => acc + cur.total, 0);
+  if (countServicios) countServicios.textContent = total || 0;
 }
 
 // ======================================================

@@ -11,6 +11,7 @@ body {
   color: #000;
 }
 
+/* Banner superior */
 .banner {
   background-color: #000;
   color: #fff;
@@ -20,35 +21,24 @@ body {
   padding: 15px;
 }
 
+/* Contenedor principal */
 .ingreso-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   padding: 20px;
 }
 
-.cards {
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 12px;
+/* Título principal */
+.titulo-ingreso {
+  font-size: 22px;
+  font-weight: bold;
   text-align: center;
-  padding: 40px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  margin-bottom: 10px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.hidden {
-  display: none;
-}
-
+/* Formularios */
 form {
-  grid-column: span 2;
   background: #fff;
   border-radius: 12px;
   padding: 20px;
@@ -59,6 +49,13 @@ form {
   margin-bottom: 20px;
 }
 
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Inputs y selects */
 input, select {
   padding: 10px;
   border: 1px solid #000;
@@ -71,12 +68,55 @@ textarea, input[type="text"] {
   width: 100%;
 }
 
-.servicios, .edades {
+/* Nombre + botón contacto */
+.nombre-wrapper {
+  display: flex;
+  align-items: stretch; /* mismo alto */
+  gap: 8px;
+}
+
+.nombre-wrapper input {
+  flex: 9; /* 90% */
+}
+
+/* Botón de contacto cuadrado */
+.contact-btn {
+  flex: 1; /* 10% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1; /* cuadrado perfecto */
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.contact-btn:hover {
+  background-color: #333;
+}
+
+/* Teléfono editable y readonly */
+#telefono {
+  transition: background-color 0.25s ease;
+}
+
+#telefono[readonly] {
+  background-color: #eee;
+  color: #555;
+  cursor: not-allowed;
+}
+
+/* Botones de servicios */
+.servicios {
   display: flex;
   gap: 10px;
 }
 
-.servicio-btn, .edad-btn {
+.servicio-btn {
   flex: 1;
   padding: 12px;
   border: none;
@@ -84,21 +124,22 @@ textarea, input[type="text"] {
   color: #fff;
   cursor: pointer;
   font-weight: bold;
+  transition: transform 0.2s ease;
 }
 
 .servicio-btn.corte { background-color: #28a745; }
 .servicio-btn.barba { background-color: #007bff; }
 .servicio-btn.tinte { background-color: #dc3545; }
 
-.edad-btn {
-  background-color: #6c757d; /* gris neutro */
-  color: #fff;
-}
-
-.servicio-btn.active, .edad-btn.active {
+.servicio-btn.active {
   outline: 3px solid #000;
 }
 
+.servicio-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Grupo de costo */
 .costo-group .costo-wrapper {
   display: flex;
   gap: 10px;
@@ -112,6 +153,7 @@ textarea, input[type="text"] {
   flex: 1; /* 20% */
 }
 
+/* Botón guardar */
 .btn-guardar {
   width: 100%;
   padding: 15px;
@@ -121,8 +163,60 @@ textarea, input[type="text"] {
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
 .btn-guardar:hover {
   background-color: #333;
+}
+
+/* Estilo futuro para lista de barberos con X roja */
+.barbero-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.barbero-item span {
+  font-weight: 500;
+}
+
+.barbero-item .remove-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.barbero-item .remove-btn:hover {
+  color: #a71d2a;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  input, select {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .servicio-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .btn-guardar {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-btn {
+    font-size: 16px;
+  }
 }
