@@ -10,7 +10,6 @@ html {
   zoom: 1;
 }
 
-
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -182,9 +181,10 @@ body {
   margin-bottom: 20px;
 }
 
+/* Formulario de tasas */
 #formTasas {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr; /* por defecto una sola columna */
   gap: 15px;
 }
 
@@ -208,7 +208,7 @@ body {
 }
 
 .btn-guardar {
-  grid-column: span 2;
+  grid-column: 1; /* ocupa toda la columna en móviles */
   padding: 12px;
   background-color: #000;
   color: #fff;
@@ -259,6 +259,7 @@ body {
   opacity: 0.85;
 }
 
+/* Responsive ajustes */
 @media screen and (max-width: 480px) {
   .dashboard {
     grid-template-columns: repeat(3, 1fr); /* sigue siendo 3 columnas */
@@ -301,16 +302,14 @@ body {
   .logout {
     font-size: 12px;
   }
-}
 
-@media screen and (max-width: 480px) {
   .cambio-section {
     margin: 10px;
     padding: 16px;
   }
 
   #formTasas {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* una sola columna en móviles */
     gap: 12px;
   }
 
@@ -327,5 +326,16 @@ body {
   .btn-guardar {
     font-size: 14px;
     padding: 10px;
+  }
+}
+
+/* En pantallas grandes, dos columnas en el formulario */
+@media screen and (min-width: 768px) {
+  #formTasas {
+    grid-template-columns: 1fr 1fr; /* dos columnas */
+  }
+
+  .btn-guardar {
+    grid-column: span 2; /* botón ocupa todo el ancho */
   }
 }
